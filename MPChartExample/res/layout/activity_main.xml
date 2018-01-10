@@ -1,7 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/activity_main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.kave.WhatsHot.app.MainActivity">
+
 <ListView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/listView1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
 </ListView>
+
+<com.example.kave.app_clima.Thermometer
+    android:id="@+id/thermometer"
+    android:layout_width="150dip"
+    android:layout_height="400dip"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="50dp"
+    android:layout_marginTop="150dp"
+    app:radius="70dp" />
+
+<TextView
+    android:id="@+id/tempView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="85dp"
+    android:layout_marginTop="470dp"
+    android:background="@android:color/transparent"
+    android:text="TextView"
+    android:textColor="@android:color/white"
+    android:textSize="25sp" />
+
+<com.example.kave.app_clima.CircularProgressBar
+    android:id="@+id/circularprogressbar1"
+    style="@style/Widget.ProgressBar.Holo.CircularProgressBar"
+    android:layout_width="150dip"
+    android:layout_height="150dip"
+    android:layout_alignTop="@+id/thermometer"
+    android:layout_marginTop="50dp"
+    android:layout_toEndOf="@+id/thermometer"
+    android:background="@android:color/transparent"
+    android:textAlignment="center"
+    android:theme="@android:style/Widget.Material.Light.ProgressBar.Large"
+    app:cpb_backgroundColor="#ffffff"
+    app:cpb_hasShadow="true"
+    app:cpb_progressColor="#1684ce"
+    app:cpb_titleColor="#1684ce" />
+
+<android.support.v7.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:id="@+id/recycler_view">
+</android.support.v7.widget.RecyclerView>
+
+<!--<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--xmlns:tools="http://schemas.android.com/tools"-->
+<!--android:id="@+id/srlContainer"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--tools:context=".MainActivity"></android.support.v4.widget.SwipeRefreshLayout>-->
+
+
+</RelativeLayout>

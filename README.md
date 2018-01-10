@@ -59,7 +59,7 @@ If you like this library, please tell others about it :two_hearts: :two_hearts:
 Demo
 -----
 
-For a brief overview of the most important features, please download the **PlayStore Demo** [**MPAndroidChart Example.apk**](https://play.google.com/store/apps/details?id=com.xxmassdeveloper.mpchartexample) and try it out. The corresponding code for the demo-application is also included in this repository inside the **MPChartExample folder**.
+For a brief overview of the most important features, please download the **PlayStore Demo** [**MPAndroidChart Example.apk**](https://play.google.com/store/apps/details?id=kave.mpchartexample) and try it out. The corresponding code for the demo-application is also included in this repository inside the **MPChartExample folder**.
 
 [![ScreenShot](https://github.com/PhilJay/MPAndroidChart/blob/master/design/video_thumbnail.png)](https://www.youtube.com/watch?v=ufaK_Hd6BpI)
 
@@ -131,7 +131,7 @@ Documentation
 -----
 For a **detailed documentation** :notebook_with_decorative_cover:, please have a look at the [**Wiki**](https://github.com/PhilJay/MPAndroidChart/wiki) or the [javadocs](https://jitpack.io/com/github/PhilJay/MPAndroidChart/v3.0.3/javadoc/).
 
-Furthermore, you can also rely on the [**MPChartExample**](https://github.com/PhilJay/MPAndroidChart/tree/master/MPChartExample) folder and check out the example code in that project. The corresponding application to the example project is also  [**available in the Google PlayStore**](https://play.google.com/store/apps/details?id=com.xxmassdeveloper.mpchartexample). 
+Furthermore, you can also rely on the [**MPChartExample**](https://github.com/PhilJay/MPAndroidChart/tree/master/MPChartExample) folder and check out the example code in that project. The corresponding application to the example project is also  [**available in the Google PlayStore**](https://play.google.com/store/apps/details?id=kave.mpchartexample).
 You can also join others in a discussion on [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/PhilJay/MPAndroidChart?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
  
 Chart types
