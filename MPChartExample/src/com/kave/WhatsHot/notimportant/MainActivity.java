@@ -47,6 +47,7 @@ import com.kave.WhatsHot.StackedBarActivity;
 import com.kave.WhatsHot.StackedBarActivityNegative;
 import com.kave.WhatsHot.fragments.SimpleChartDemo;
 import com.kave.WhatsHot.realm.RealmMainActivity;
+import com.kave.WhatsHot.app.Thermometer;
 
 import java.util.ArrayList;
 

@@ -37,19 +37,11 @@ class PostAdapterCurrent(dataSet: List<PostCurrent>) : RecyclerView.Adapter<Post
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
 
         holder?.let { holder ->
-//            holder.textView_temp.text = this.dataSet[position].currentTemp
-//            holder.textView_humi.text = this.dataSet[position].currentHumi
 
             holder.textView_temp.setText(""+ this.dataSet[position].currentTemp)
             holder.textView_humi.setText(""+ this.dataSet[position].currentHumi)
             holder.textView_tit.text = this.dataSet[position].currentDate.toString()
 
-//            holder.titleTextView.text = this.dataSet[position].currentTemp
-//            holder.bodyFloatView.editableText = this.dataSet[position].currentTemp
-//            holder.bodyTextView.text = this.dataSet[position].body
-//            holder.bodyFloatView.text = this.dataSet[position].currentTemp
-//            holder.bodyFloatView.Double = this.dataSet[position].currentTemp
-//            holder.bodyFloatView.text = this.dataSet[position].currentTemp
         }
 
     }

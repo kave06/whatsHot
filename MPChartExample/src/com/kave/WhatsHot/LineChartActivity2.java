@@ -1,4 +1,3 @@
-
 package com.kave.WhatsHot;
 
 import android.graphics.Color;
@@ -25,7 +24,12 @@ import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
+import com.kave.WhatsHot.app.GetTemp;
+import com.kave.WhatsHot.app.ListTemp;
 import com.kave.WhatsHot.notimportant.DemoBase;
+import com.kave.WhatsHot.app.GetTemp.*;
+
+import org.w3c.dom.Entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,7 +84,7 @@ public class LineChartActivity2 extends DemoBase implements OnSeekBarChangeListe
 
         // add data
         // TODO añidor datos
-        setData(20, 30);
+        setData();
 
         mChart.animateX(2500);
 
@@ -276,21 +280,39 @@ public class LineChartActivity2 extends DemoBase implements OnSeekBarChangeListe
         tvX.setText("" + (mSeekBarX.getProgress() + 1));
         tvY.setText("" + (mSeekBarY.getProgress()));
 
-        setData(mSeekBarX.getProgress() + 1, mSeekBarY.getProgress());
+//        setData(mSeekBarX.getProgress() + 1, mSeekBarY.getProgress());
+        setData();
 
         // redraw
         mChart.invalidate();
     }
 
-    private void setData(int count, float range) {
+//    private void setData(int count, float range) {
+    private void setData() {
 
         ArrayList<Entry> yVals1 = new ArrayList<Entry>();
+        ArrayList<Float> listTemperature = new ArrayList<Float>();
+        listTemperature = com.kave.WhatsHot.app.GetTempKt.getTemp();
+        ArrayList<Integer> listHour = new ArrayList<Integer>();
+        listHour = com.kave.WhatsHot.app.GetTempKt.getHour();
+        System.out.println(listHour.get(0));
 
-        for (int i = 0; i < count; i++) {
-            float mult = range / 2f;
-            float val = (float) (Math.random() * mult) + 50;
-            yVals1.add(new Entry(i, val));
+        int lenArray = listHour.size() -1;
+        System.out.println("--------------------------------------------------------------");
+        System.out.println("lenArray: " + lenArray);
+
+        for (int i=0; i< lenArray; i++){
+            System.out.println(listTemperature.get(i));
+            System.out.println(listHour.get(i));
+//            yVals1.add(new Entry(listTemperature.get(i), listHour.get(i)));
+            yVals1.add(new Entry(listHour.get(i),listTemperature.get(i)));
         }
+
+//        for (int i = 0; i < count; i++) {
+//            float mult = range / 2f;
+//            float val = (float) (Math.random() * mult) + 50;
+//            yVals1.add(new Entry(i, val));
+//        }
 
 //        ArrayList<Entry> yVals2 = new ArrayList<Entry>();
 //
@@ -326,7 +348,9 @@ public class LineChartActivity2 extends DemoBase implements OnSeekBarChangeListe
             mChart.notifyDataSetChanged();
         } else {
             // create a dataset and give it a type
-            set1 = new LineDataSet(yVals1, "DataSet 1");
+//            set1 = new LineDataSet(yVals1, "DataSet 1");
+
+            set1 = new LineDataSet(yVals1, "Temperatura");
 
             set1.setAxisDependency(AxisDependency.LEFT);
             set1.setColor(ColorTemplate.getHoloBlue());

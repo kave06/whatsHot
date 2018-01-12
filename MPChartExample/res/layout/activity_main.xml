@@ -14,7 +14,8 @@ tools:context="com.kave.WhatsHot.app.MainActivity">
 
 </ListView>
 
-<com.example.kave.app_clima.Thermometer
+<!--<com.example.kave.app_clima.Thermometer-->
+<com.kave.WhatsHot.app.Thermometer
     android:id="@+id/thermometer"
     android:layout_width="150dip"
     android:layout_height="400dip"
@@ -34,7 +35,8 @@ tools:context="com.kave.WhatsHot.app.MainActivity">
     android:textColor="@android:color/white"
     android:textSize="25sp" />
 
-<com.example.kave.app_clima.CircularProgressBar
+<!--<com.example.kave.app_clima.CircularProgressBar-->
+<com.kave.WhatsHot.app.CircularProgressBar
     android:id="@+id/circularprogressbar1"
     style="@style/Widget.ProgressBar.Holo.CircularProgressBar"
     android:layout_width="150dip"
